@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- فونت روبوتو از گوگل فونت ها -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <!-- فاویکونی که ساختم -->
+    <link rel="icon" href="media/favicon.ico">
+    <!-- صفحه استایل لینک شده -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>My Movie Theater</title>
+</head>
+<body>
+    <section class="movie-theater">
+        <h1 class="special-gothic-expanded-one-regular">🎥Zahra's Cinema🍿</h1>
+        <h3>Today, we are screening the Howel's Moving Castle animation.</h3>
+        <!-- دربر دارنده ویدیو -->
+        <div class="video-container">
+            <!-- نور های چشمک زن -->
+            <div class="blinking-lights"></div>
+            <!-- متن متحرک (marquee) بالای ویدیو -->
+            <div class="marquee"><span>🎬 Welcome to My Movie Night! Enjoy the show! 🍿</span></div>
+            <!-- خود ویدیو -->
+            <video id="trailer" controls autoplay loop>
+                <source src="media/trailer.mp4">
+            </video>
+        </div>
+        <div class="buttons">
+            <!-- برای پخش دوباره و نمره دهی -->
+            <a href="#trailer" class="button">🔁 Play Agian</a>
+            <a href="#rating" class="button">✳️ Rate Movie</a>
+        </div>
+        <!-- ستاره های نمره دهی که میشود روی آن ها کلیک کرد -->
+        <div class="rating">
+            <input type="radio" id="star-1" name="rating" value="1"><label for="star-1" class="star">⭐</label>
+            <input type="radio" id="star-2" name="rating" value="2"><label for="star-2" class="star">⭐</label>
+            <input type="radio" id="star-3" name="rating" value="3"><label for="star-3" class="star">⭐</label>
+            <input type="radio" id="star-4" name="rating" value="4"><label for="star-4" class="star">⭐</label>
+            <input type="radio" id="star-5" name="rating" value="5"><label for="star-5" class="star">⭐</label>
+        </div>
+    </section>
+</body>
+</html>

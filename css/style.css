@@ -1,0 +1,161 @@
+/* استایلی که به بادی میدهیم */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    min-height: 900px;
+    background-image: linear-gradient(135deg, rgba(48, 43, 99, 0.8), rgba(36, 36, 62, 0.8)), url('../media/cinema5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+/* استایل فونت گوتیک روبوتو از گوگل فونت ها */
+.special-gothic-expanded-one-regular {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+/* تئاتر سینمایی */
+.movie-theater {
+    color: #fff;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+/* استایل برای هدینگ 1 */
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-shadow: 3px 3px 5px #000;
+}
+/* استایل دربر دارنده ویدیو */
+.video-container {
+    margin: 30px 0;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+/* استایل برای خود ویدیو و ابعادش */
+video {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(200, 115, 194);
+    display: block;
+    box-sizing: border-box;
+  }
+/* نور های چشمک زن اطراف ویدیو */
+.blinking-lights {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 15px;
+    animation: blink 2s infinite alternate;
+    pointer-events: none;
+  }
+  @keyframes blink {
+    0% {
+      box-shadow: 0 0 10px rgba(255, 255, 0, 0.8), 0 0 20px rgba(255, 255, 0, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.8);
+    }
+  }
+/* استایل برای دکمه های تکرار و نمره دهی */
+  .button {
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: #ffcc00;
+    color: #1e1e1e;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(255, 204, 0, 0.4);
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 10px 5px;
+  }
+  .button:hover {
+    background-color: #ffd633;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(255, 204, 0, 0.6);
+  }
+/* استایل برای ستاره های نمره دهی به ویدیو */
+.rating {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    gap: 10px;
+}
+/* ستارهای نمره دهی */
+.rating {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    gap: 10px;
+}
+/*  خود ستاره‌ها وقتی که کلیک کنیمبرجسته بشه کمی */
+.star {
+    color: #999;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    }
+.star:hover,
+input[type="radio"]:checked ~ label[for="star-1"],
+input[type="radio"]:checked ~ label[for="star-2"],
+input[type="radio"]:checked ~ label[for="star-3"],
+input[type="radio"]:checked ~ label[for="star-4"],
+input[type="radio"]:checked ~ label[for="star-5"] {
+    color: #ffcc00;
+    transform: scale(1.2);
+    }
+/* مخفی کردن input */
+input[type="radio"] {
+    display: none;
+    }
+/*  استایل برای متن متحرک بالای ویدیو یا همان */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #ffcc00;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000;
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee-animation 15s linear infinite;
+}
+@keyframes marquee-animation {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
